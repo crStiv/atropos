@@ -21,7 +21,7 @@ sequenceDiagram
 
                 alt Batch Available
                     API-->>R0: {'batch': [data_item_1, ...]}
-                    Note over R0: Received batch for step S+1. Breaking loop.
+                    Note over R0: Received batch for step S+1. Breaking the loop.
                 else No Batch Available
                     API-->>R0: {'batch': null}
                     Note over R0: No batch ready yet. Will retry.
