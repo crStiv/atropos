@@ -20,7 +20,7 @@ def _normalize_numerical_value(value_str: str) -> float:
 
 def _extract_final_answer(text: str) -> str:
     """
-    Extract the final answer from text that might include a full solution.
+    Extract the final answer from the text that might include a full solution.
 
     Handles formats like:
     - "#### 42" (GSM8K style)
@@ -211,7 +211,7 @@ class AccuracyReward(RewardFunction):
 
         Args:
             completions: List of model completions to evaluate
-            solution: Ground truth solution(s) - can be a single value or list of values
+            solution: Ground truth solution(s) - can be a single value or a list of values
             ground_truth: Optional canonical ground truth answers (used instead of solution if provided)
             **kwargs: Additional context
 
@@ -283,7 +283,7 @@ def accuracy_reward(
 
     Args:
         completions: List of model completions to evaluate
-        solution: Ground truth solution(s) - can be a single value or list of values
+        solution: Ground truth solution(s) - can be a single value or a list of values
         ground_truth: Optional canonical ground truth answers (used instead of solution if provided)
         **kwargs: Additional parameters
 
