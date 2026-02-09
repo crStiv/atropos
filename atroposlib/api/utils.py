@@ -104,7 +104,7 @@ def grab_exact_from_heterogeneous_queue(
     group_sizes_set = set(group_sizes)
     group_batching_storage = {size: [] for size in group_sizes_set}
 
-    # Index into the queue and batch related indices into "packs"
+    # Index into the queue and batch-related indices into "packs"
     potential_batch_indices = []
     for i, group_size in enumerate(group_sizes):
         group_batching_storage[group_size].append(i)
@@ -162,7 +162,7 @@ def grab_batch_with_minimum_allocations(
         if env.get("connected", False) and env.get("min_batch_allocation") is not None:
             env_min_allocations[env["registered_id"]] = env["min_batch_allocation"]
 
-    # If no minimum allocations, fall back to original function
+    # If no minimum allocations, fall back to the original function
     if not env_min_allocations:
         return grab_exact_from_heterogeneous_queue(queue, batch_size)
 
