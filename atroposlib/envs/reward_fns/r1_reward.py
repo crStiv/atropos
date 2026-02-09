@@ -88,7 +88,7 @@ class FormatReasoningReward(RewardFunction):
 
     def compute(self, completions: List[Any], **kwargs) -> List[float]:
         """
-        Check if completions have proper reasoning format.
+        Check if completions have a proper reasoning format.
 
         Args:
             completions: List of completions to evaluate
